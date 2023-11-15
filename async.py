@@ -19,19 +19,12 @@ async def main():
 
 # Run the event loop to execute the asynchronous code
 if __name__ == "__main__":
-    # Create an event loop
-    loop = asyncio.get_event_loop()
-    
-    try:
-        # Record the start time for measuring execution time
-        start_time = time.time()
-        
-        # Run the main asynchronous function
-        loop.run_until_complete(main())
-        
-        # Calculate and print the total execution time
-        end_time = time.time()
-        print(f"Total execution time: {end_time - start_time} seconds")
-    finally:
-        # Close the loop to free up resources
-        loop.close()
+    # Record the start time for measuring execution time
+    start_time = time.time()
+
+    # Run the main asynchronous function using asyncio.run()
+    asyncio.run(main())
+
+    # Calculate and print the total execution time
+    end_time = time.time()
+    print(f"Total execution time: {end_time - start_time} seconds")
